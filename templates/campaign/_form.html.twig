@@ -1,0 +1,19 @@
+{{ form_start(form) }}
+
+    <div class="input-field">
+        {{ form_widget(form.name, {'attr': {'class': 'validate'}}) }}
+        {{ form_label(form.name, 'Votre Nom')}}
+    </div>
+    <div class="input-field col s12 l8">
+        {{ form_widget(form.title, {'attr': {'class': 'validate'}}) }}
+        {{ form_label(form.title, 'Titre de votre campagne')}}
+    </div>
+    <div class="input-field col s12">
+        {{ form_widget(form.content, {'attr': {'class': 'materialize-textarea description', 'placeholder' : 'Décrivez à vos amis pourquoi vous faites une campagne'}}) }}
+    </div>
+    <div class="input-field col s12 l6">
+        {{ form_widget(form.goal, {'attr': {'class': 'validate'}}) }}
+        {{ form_label(form.goal, 'Votre objectif en euros')}}
+    </div>
+    <button class="btn btn-large waves-effect waves-light pink lighten-1 col s12">{{ button_label|default('Créer') }}<i class="material-icons right">send</i></button>
+{{ form_end(form) }}

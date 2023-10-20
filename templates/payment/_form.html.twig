@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center">
+                <h4>Participez en quelques secondes</h4>
+            </div>
+        </div>
+        <!--   Form Section   -->
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+{{ form_start(form) }}
+    <h5 class="center">Votre identité</h5>
+    <div class="input-field col s12 l6">
+        {{ form_widget(form.participant.children.email, {'attr': {'class': 'validate'}}) }}
+        {{ form_label(form.participant.children.email, 'Votre email')}}
+    </div>
+    <div class="input-field col s12 l6">
+        {{ form_widget(form.amount, {'attr': {'class': 'validate'}, 'value' : amount}) }}
+        {{ form_label(form.amount, 'Votre participation')}}
+    </div>
+    <div class="clearfix"></div>
+    <h5 class="center">Paiement</h5>
+    <div class="input-field col s12">
+        {{ form_widget(form.participant.children.name, {'attr': {'class': 'validate'}}) }}
+        {{ form_label(form.participant.children.name, 'Nom sur la carte')}}
+    </div>
+    <button class="btn btn-large waves-effect waves-light pink lighten-1 col s12">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
